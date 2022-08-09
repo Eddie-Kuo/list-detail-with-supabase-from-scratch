@@ -36,7 +36,11 @@ footer {
 
 .color-card {
     width: 200px;
-    height: 200px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.39);
+    text-align: center;
+    margin: 5px;
 }
 
 .color-container {
