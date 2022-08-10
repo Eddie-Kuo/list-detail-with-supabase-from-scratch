@@ -1,8 +1,14 @@
-// import functions and grab DOM elements
+import { getColors } from './fetch-utils.js';
+import { renderColor } from './render-utils.js';
 
-// let state
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+const colorContainer = document.querySelector('.color-container');
+
+async function loadData() {
+    const colors = await getColors();
+    for (let color of colors) {
+        const colorBlock = renderColor(color);
+        colorContainer.append(colorBlock);
+    }
+}
+loadData();
