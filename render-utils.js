@@ -38,3 +38,4 @@ export function renderColorDetail(data) {
 
     return colorPage;
 }
+
