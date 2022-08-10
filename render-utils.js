@@ -3,12 +3,10 @@ export function renderColor(data) {
     const nameTag = document.createElement('h1');
     const a = document.createElement('a');
 
-
     colorDiv.classList.add('color-card');
     colorDiv.style.backgroundColor = data.Name;
 
     a.href = `./detail/?id=${data.id}`;
-    // nameTag.textContent = data.Name;
 
     colorDiv.append(nameTag);
     a.append(colorDiv);
@@ -30,9 +28,13 @@ export function renderColorDetail(data) {
     colorHistory.textContent = data.History;
     colorHistory.classList.add('color-history');
 
+    if (data.id === 6){
+        header.classList.remove('page-header');
+        header.classList.add('page-header-black');
+    }
+
     colorPageImg.append(header);
     colorPage.append(colorPageImg, colorHistory);
 
-    // colorPage.append(header, colorPageImg, colorHistory);
     return colorPage;
 }
